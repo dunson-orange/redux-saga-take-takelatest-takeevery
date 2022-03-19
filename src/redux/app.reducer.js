@@ -1,18 +1,18 @@
 const INITIAL_STATE = {
-  value: 0
+  value: 0,
 };
 
 const appReducer = (state = INITIAL_STATE, action) => {
   switch (action.type) {
-    case 'INCREMENT_FROM_SAGA':
+    case "INCREMENT":
       return {
         ...state,
-        value: state.value + 1
+        value: state.value + 1,
       };
-    case 'DECREMENT':
+    case "DECREMENT":
       return {
         ...state,
-        value: state.value - 1
+        value: state.value - 1,
       };
     default:
       return state;
